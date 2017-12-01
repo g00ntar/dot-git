@@ -39,9 +39,9 @@ Inspired by this [hackernews comment by StreakyCobra](https://news.ycombinator.c
 
 Run the following commands (make sure to change `your_repo_url` and `your_shell_rc`):
 ```bash
-$ git clone --bare your_repo_url ~/.config/dotgit
+$ git clone --bare https://github.com/g00ntar/dot-git ~/.config/dotgit
 $ git --git-dir="$HOME/.config/dotgit" --work-tree="$HOME" checkout -f --
-$ source ~/.your_shell_rc
+$ source ~/.fish
 ```
 
 You may have to add the `dot` alias back if you did not version your shell rc.
