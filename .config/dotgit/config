@@ -17,6 +17,26 @@
     remote = origin
     merge  = refs/heads/master
 
+[remote "origin"]
+    url = https://github.com/g00ntar/dot-git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+
+[user]
+	email = marcin.gontarek@gmail.com
+	name = g00ntar
+
+[core]
+    repositoryformatversion = 0
+    filemode = true
+    excludesFile = "~/.config/dotgit/ignore"
+
+[grep]
+    lineNumber = true
+    patternType = extended
+
+[status]
+    showUntrackedFiles = no
+
 [alias]
     # convenient aliases
     files  = "!git i-files"
@@ -116,15 +136,3 @@
                 "elif test $# -gt 1; then "                                     \
                 "  git i-dopick \"$@\"; "                                       \
                 "fi #"
-
-[core]
-    repositoryformatversion = 0
-    filemode = true
-    excludesFile = "~/.config/dotgit/ignore"
-
-[grep]
-    lineNumber = true
-    patternType = extended
-
-[status]
-    showUntrackedFiles = no
