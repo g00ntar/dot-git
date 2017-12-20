@@ -5,6 +5,7 @@ if [ -e $GIT_WORK_TREE/README.md ]; then
 
 	if [ $ID = "ubuntu" ]; then
 		echo "deb http://ppa.launchpad.net/fish-shell/release-2/ubuntu $DISTRIB_CODENAME main" | sudo tee /etc/apt/sources.list.d/fish.list
+		sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6DC33CA5
 	else 
 		echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/2/Debian_9.0/ /' | sudo tee /etc/apt/sources.list.d/fish.list
 	fi
