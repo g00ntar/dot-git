@@ -1,3 +1,11 @@
-function md --description "Create folder and enter"
-  mkdir -p $argv; cd $argv[1]
+function md --wraps mkdir -d "Create a directory and cd into it"
+  command mkdir -p $argv
+  if test $status = 0
+    switch $argv[(count $argv)]
+      case '-*'
+      case '*'
+        cd $argv[(count $argv)]
+        return
+    end
+  end
 end

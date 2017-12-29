@@ -1,4 +1,4 @@
 
 function fi --description "Locate a file"
-	locate . | fzf --query "$argv"
+	locate --database=$HOME/.mlocate.db . | fzf --query "$argv"
 end
