@@ -12,3 +12,7 @@ alias chmox='chmod +x'
 
 alias dfree="df -P -kHl"
 alias myip="curl https://api.ipify.org"
+alias ungz="gunzip -kr"
+
+# File size
+alias fs="stat -f \"%z bytes\""
