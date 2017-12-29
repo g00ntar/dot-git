@@ -6,15 +6,17 @@ if [ -e $GIT_WORK_TREE/README.md ]; then
 	if [ $ID = "ubuntu" ]; then
 		echo "deb http://ppa.launchpad.net/fish-shell/release-2/ubuntu $DISTRIB_CODENAME main" | sudo tee /etc/apt/sources.list.d/fish.list
 		sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6DC33CA5
+		echo "deb http://ppa.launchpad.net/aacebedo/fasd/ubuntu $DISTRIB_CODENAME main" | sudo tee /etc/apt/sources.list.d/fasd.list
+		sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E834F228
 	else 
 		echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/2/Debian_9.0/ /' | sudo tee /etc/apt/sources.list.d/fish.list
 	fi
 
 	sudo apt update 
 
-	sudo apt install -y httpie htop nano fish byobu curl wget python3-dev python3-pip mlocate sudo coreutils unzip nmap bind-utils
+	sudo apt install -y httpie htop nano fish byobu curl wget python3-dev python3-pip mlocate sudo coreutils unzip nmap fasd grc
 	sudo -H pip3 install thefuck youtube_dl
-	sudo easy_install Pygments
+	sudo -H easy_install3 Pygments
 
 	curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 
