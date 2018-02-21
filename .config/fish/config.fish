@@ -1,5 +1,6 @@
 set default_user "gontar"
 set default_machine "GBIT"
+set -Ux TMPDIR /tmp
 
 source $HOME/.config/fish/conf.d/*
 
