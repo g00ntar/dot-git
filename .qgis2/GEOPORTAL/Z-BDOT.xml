@@ -1,0 +1,26 @@
+<GDAL_WMTS>
+	<GetCapabilitiesUrl>http://mapy.geoportal.gov.pl/wss/service/WMTS/guest/wmts/Z_BDOT10k?SERVICE=WMTS&amp;REQUEST=GetCapabilities</GetCapabilitiesUrl>
+	<Layer>BDOT10k</Layer>
+	<Style>default</Style>
+	<TileMatrixSet>EPSG:2180</TileMatrixSet>
+	<Format>image/png</Format>
+	<InfoFormat>text/html</InfoFormat>
+	<MaxConnections>4</MaxConnections>
+	<Transparent>TRUE</Transparent>
+	<DataWindow>
+		<UpperLeftX>118322.1678942625</UpperLeftX>
+		<UpperLeftY>806302.1230210875</UpperLeftY>
+		<LowerRightX>896351.9177006499</LowerRightX>
+		<LowerRightY>116649.4687185375</LowerRightY>
+	</DataWindow>
+	<BandsCount>4</BandsCount>
+	<Cache>
+		<Path>./gdalwmscache/Z-BDOT_WMTS</Path>
+		<Depth>4</Depth>
+		<Extension>.png</Extension>
+	</Cache>
+	<Timeout>300</Timeout>
+	<UnsafeSSL>true</UnsafeSSL>
+	<ZeroBlockHttpCodes>204,404</ZeroBlockHttpCodes>
+	<ZeroBlockOnServerException>true</ZeroBlockOnServerException>
+</GDAL_WMTS>

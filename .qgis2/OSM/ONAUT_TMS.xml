@@ -1,0 +1,27 @@
+<GDAL_WMS>
+	<Service name="TMS">
+		<ServerUrl>http://t1.openseamap.org/seamark/${z}/${x}/${y}.png</ServerUrl>
+	</Service>
+	<MaxConnections>4</MaxConnections>
+	<Transparent>TRUE</Transparent>
+	<ImageFormat>image/png</ImageFormat>
+	<DataWindow>
+		<UpperLeftX>-20037508.34</UpperLeftX>
+		<UpperLeftY>20037508.34</UpperLeftY>
+		<LowerRightX>20037508.34</LowerRightX>
+		<LowerRightY>-20037508.34</LowerRightY>
+		<TileLevel>18</TileLevel>
+		<TileCountX>1</TileCountX>
+		<TileCountY>1</TileCountY>
+		<YOrigin>top</YOrigin>
+	</DataWindow>
+	<Projection>EPSG:3857</Projection>
+	<BlockSizeX>256</BlockSizeX>
+	<BlockSizeY>256</BlockSizeY>
+	<BandsCount>4</BandsCount>
+	<Cache>
+		<Path>./gdalwmscache/ONAUT_TMS</Path>
+		<Depth>4</Depth>
+		<Extension>.png</Extension>
+	</Cache>
+</GDAL_WMS>

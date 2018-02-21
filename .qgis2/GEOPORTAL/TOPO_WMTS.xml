@@ -1,0 +1,22 @@
+<GDAL_WMTS>
+	<GetCapabilitiesUrl>http://mapy.geoportal.gov.pl/wss/service/WMTS/guest/wmts/TOPO?SERVICE=WMTS&amp;REQUEST=GetCapabilities</GetCapabilitiesUrl>
+	<Layer>MAPA TOPOGRAFICZNA</Layer>
+	<Style>default</Style>
+	<TileMatrixSet>EPSG:2180</TileMatrixSet>
+	<InfoFormat>text/html</InfoFormat>
+	<DataWindow>
+		<UpperLeftX>124925.9165184</UpperLeftX>
+		<UpperLeftY>806302.1230210875</UpperLeftY>
+		<LowerRightX>896351.9177006499</LowerRightX>
+		<LowerRightY>116649.4687185375</LowerRightY>
+	</DataWindow>
+	<BandsCount>4</BandsCount>
+	<Cache>
+		<Path>./gdalwmscache/TOPO_WMTS</Path>
+		<Depth>4</Depth>
+		<Extension>.png</Extension>
+	</Cache>
+	<UnsafeSSL>true</UnsafeSSL>
+	<ZeroBlockHttpCodes>204,404</ZeroBlockHttpCodes>
+	<ZeroBlockOnServerException>true</ZeroBlockOnServerException>
+</GDAL_WMTS>

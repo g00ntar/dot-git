@@ -1,0 +1,25 @@
+<GDAL_WMTS>
+	<GetCapabilitiesUrl>http://mapy.geoportal.gov.pl/wss/service/WMTS/guest/wmts/ORTO?SERVICE=WMTS&amp;REQUEST=GetCapabilities</GetCapabilitiesUrl>
+	<Layer>ORTOFOTOMAPA</Layer>
+	<Style>default</Style>
+	<TileMatrixSet>EPSG:2180</TileMatrixSet>
+	<InfoFormat>text/html</InfoFormat>
+	<MaxConnections>4</MaxConnections>
+	<Transparent>FALSE</Transparent>
+	<DataWindow>
+		<UpperLeftX>164956.3965792</UpperLeftX>
+		<UpperLeftY>785043.7357127313</UpperLeftY>
+		<LowerRightX>870061.8067872</LowerRightX>
+		<LowerRightY>124980.9499648</LowerRightY>
+	</DataWindow>
+	<BandsCount>4</BandsCount>
+	<Cache>
+		<Path>./gdalwmscache/ORTO_WMTS</Path>
+		<Depth>4</Depth>
+		<Extension>.jpg</Extension>
+	</Cache>
+	<MaxConnections>20</MaxConnections>
+	<UnsafeSSL>true</UnsafeSSL>
+	<ZeroBlockHttpCodes>204,404</ZeroBlockHttpCodes>
+	<ZeroBlockOnServerException>true</ZeroBlockOnServerException>
+</GDAL_WMTS>

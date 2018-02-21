@@ -1,0 +1,11 @@
+cache/
+gdal_pam/
+palettes/
+previewImages/
+processing/
+themes/
+console_history.txt
+__pycache__/
+*.py[cod]
+*$py.class
+resource_sharing/

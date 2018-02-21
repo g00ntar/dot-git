@@ -1,0 +1,20 @@
+[general]
+name=QConsolidate
+description=Consolidate QGIS project into one directory
+category=Plugins
+version=0.2.1
+qgisMinimumVersion=2.0
+
+author=Alexander Bruy
+email=alexander.bruy@gmail.com
+
+icon=icons/qconsolidate.png
+
+tags=project,consolidate
+
+homepage=http://hub.qgis.org/projects/qconsolidate/wiki
+tracker=http://hub.qgis.org/projects/qconsolidate/issues
+repository=http://github.com/alexbruy/qconsolidate
+
+experimental=True
+deprecated=False
