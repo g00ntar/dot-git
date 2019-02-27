@@ -1,0 +1,100 @@
+#!/bin/sh -e
+add-apt-repository ppa:aacebedo/fasd
+
+apt install
+	byobu 
+	coreutils
+	dnsutils
+	curl
+	fasd
+	fish
+	grc
+	htop
+	httpie
+	mlocate
+	nano
+	nmap
+	python3-dev
+	python3-pip
+	unzip
+	wget
+	silversearcher-ag
+	direnv
+	mosh
+	fasd
+	ncdu
+	most
+	multitail
+	pydf
+	mtr
+	node
+	docker
+	yarn
+	virtualbox
+	cockpit
+	subline
+	qgis
+	chrome-browser
+	vscode
+	jq
+
+pip3 install
+	thefuck 
+	youtube_dl
+	streamlink
+	pygments
+	pygments-style-solarized 
+
+curl | sh
+	curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
+	sudo wget -qO /usr/local/bin/tldr https://4e4.win/tldr && sudo chmod +x /usr/local/bin/tldr
+	sudo wget https://raw.githubusercontent.com/Russell91/sshrc/master/sshrc -O /usr/local/bin/sshrc && chmod +x /usr/local/bin/sshrc # ? ~/.bin
+	wget https://storage.googleapis.com/serveo/download/2018-05-08/serveo-linux-amd64 -O /usr/local/serveo && chmod +x /usr/local/bin/serveo # ? ~/.bin
+	curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+	git clone https://github.com/dylanaraps/fff && cd fff && make install
+	git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+
+	mkdir ~/.bash_completion.d
+	curl "https://raw.githubusercontent.com/rupa/z/master/{z.sh}" \
+	    -o ~/.bash_completion.d/"#1"
+	curl "https://raw.githubusercontent.com/changyuheng/fz/master/{fz.sh}" \
+	    -o ~/.bash_completion.d/z"#1"
+
+	if [ -d ~/.bash_completion.d ]; then
+		for file in ~/.bash_completion.d/*; do
+			. $file
+		done
+	fi
+
+npm install -g
+	bitly-client
+	fx
+
+sudo usermod --append --groups disk,sudo,www-data,docker,vboxusers $USER
+
+fisher fzf z choices await shark menu get edc/bass 0rax/narwhal nyarly/fish-bang-bang laughedelic/pisces omf/thefuck omf/apt omf/extract omf/grc omf/fasd omf/msg omf/expand omf/technicolor omf/theme-bobthefish
+
+echo $(which byobu) | sudo tee -a /etc/shells
+echo $(which fish) | sudo tee -a /etc/shells
+echo $(which nologin) | sudo tee -a /etc/shells
+	
+sudo chsh $USER --shell $(which fish) 
+
+sudo usermod --append --groups disk,sudo,www-data,docker,vboxusers $USER
+
+#mv dotgit/bin/git-profile -> ~/.bin
+
+#wget https://github.com/browsh-org/browsh/releases/download/v1.4.12/browsh_1.4.12_linux_amd64.deb && sudo dpkg -i browsh_1.4.12_linux_amd64.deb
+#or
+#docker run --rm -it browsh/browsh
+#or create PWD docker-compose.yml file and wrapper script
+
+# git clone https://github.com/slomkowski/bash-full-of-colors.git .bash-full-of-colors
+# [ -f .bashrc ] && mv -v .bashrc bashrc.old
+# [ -f .bash_profile ] && mv -v .bash_profile bash_profile.old
+# [ -f .bash_aliases ] && mv -v .bash_aliases bash_aliases.old
+# [ -f .bash_logout ] && mv -v .bash_logout bash_logout.old
+# ln -s .bash-full-of-colors/bashrc.sh .bashrc
+# ln -s .bash-full-of-colors/bash_profile.sh .bash_profile
+# ln -s .bash-full-of-colors/bash_aliases.sh .bash_aliases
+# ln -s .bash-full-of-colors/bash_logout.sh .bash_logout
